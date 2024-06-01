@@ -25,3 +25,6 @@ dist-ssr
 
 # Puppeteer browser
 chrome/*
+
+# Rendered pdfs
+pdfs/*
