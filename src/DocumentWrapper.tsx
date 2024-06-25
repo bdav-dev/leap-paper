@@ -4,6 +4,8 @@ type DocumentWrapperProps = {
 
 export default function DocumentWrapper(props: DocumentWrapperProps) {
 
+
+
     return (
         <div className="flex justify-center bg-neutral-300">
 

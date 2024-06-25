@@ -1,52 +1,80 @@
-import Code from "./components/Code"
-import H1 from "./components/H1"
-import Highlight from "./components/Highlight"
-import LargeBr from "./components/LargeBr"
-import Panel from "./components/Panel"
+import Block from "./pageElements/Block"
+import Blockquote from "./pageElements/Blockquote"
+import Code from "./pageElements/Code"
+import CodeBlock from "./pageElements/CodeBlock"
+import H1 from "./pageElements/H1"
+import H2 from "./pageElements/H2"
+import H3 from "./pageElements/H3"
+import Highlight from "./pageElements/Highlight"
+import LargeBr from "./pageElements/themeIndependent/LargeBr"
 
-function Document() {
+export default function Document() {
 
   return (
-    <div className="">
+    <>
+      <H1>Document Demo: Themes (First Heading, H1)</H1>
+
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Soluta provident possimus modi. Officia laborum fuga iste dolor distinctio!
+      Minima, eius sapiente commodi tempora officiis deleniti assumenda. Nesciunt quaerat delectus fugit.
+      <LargeBr />
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Soluta provident possimus modi. Officia laborum fuga iste dolor distinctio!
+      Minima, eius sapiente commodi tempora officiis deleniti assumenda. Nesciunt quaerat delectus fugit.
+      <LargeBr />
+
+      <H2>Second Heading, H2</H2>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Soluta provident possimus modi. Officia laborum fuga iste dolor distinctio!
+      Minima, eius sapiente commodi tempora officiis deleniti assumenda. Nesciunt quaerat delectus fugit.
+      <LargeBr />
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Soluta provident possimus modi. Officia laborum fuga iste dolor distinctio!
+      Minima, eius sapiente commodi tempora officiis deleniti assumenda. Nesciunt quaerat delectus fugit.
+      <LargeBr />
 
 
-      <H1>First Leap-Paper Demo!</H1>
+      <H3>Third Heading, H3</H3>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Soluta provident possimus modi. Officia laborum fuga iste dolor distinctio!
+      Minima, eius sapiente commodi tempora officiis deleniti assumenda. Nesciunt quaerat delectus fugit.
+      <LargeBr />
 
-      <div>
+      This is some inline <Code>Code</Code>.
+
+      <LargeBr />
+
+      This is a code block:
+      <CodeBlock language="java">
+        <pre>
+          public static void main(String[] args) &#123;<br />
+          &nbsp;&nbsp;System.out.println("Hello world");<br />
+          &#125;
+        </pre>
+      </CodeBlock>
+
+      <LargeBr />
+
+      <Blockquote>
+        This is a blockquote with some text inside!
+      </Blockquote>
+
+      <LargeBr />
+
+      <Block>
+        This is a block full of text.<br />
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Quaerat non, iusto dolor iste hic possimus recusandae delectus fugit voluptatibus!
-        Libero eum aliquam facere adipisci laborum modi saepe recusandae blanditiis placeat!
+        Soluta provident possimus modi. Officia laborum fuga iste dolor distinctio!
+        Minima, eius sapiente commodi tempora officiis deleniti assumenda. Nesciunt quaerat delectus fugit.
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Quaerat non, iusto dolor iste hic possimus recusandae delectus fugit voluptatibus!
-        Libero eum aliquam facere adipisci laborum modi saepe recusandae blanditiis placeat!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Quaerat non, iusto dolor iste hic possimus recusandae delectus fugit voluptatibus!
-        Libero eum aliquam facere adipisci laborum modi saepe recusandae blanditiis placeat!
-      </div>
+        Soluta provident possimus modi. Officia laborum fuga iste dolor distinctio!
+        Minima, eius sapiente commodi tempora officiis deleniti assumenda. Nesciunt quaerat delectus fugit.
+      </Block>
 
+      <LargeBr />
+      
+      And this is <Highlight>highlighed</Highlight> text.
 
-      <LargeBr/>
-
-      I even can show some <Code>Code</Code>!
-
-      <LargeBr/>
-
-      <Panel>
-        This is a panel and it contains a lot of text.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Magnam, vero! Blanditiis obcaecati, quod nihil ipsum aut dolor dignissimos animi inventore id.
-        Laudantium inventore quod sit quos eius ipsa blanditiis ea.
-        Magnam, vero! Blanditiis obcaecati, quod nihil ipsum aut dolor dignissimos animi inventore id.
-        Laudantium inventore quod sit quos eius ipsa blanditiis ea.
-        Magnam, vero! Blanditiis obcaecati, quod nihil ipsum aut dolor dignissimos animi inventore id.
-        Laudantium inventore quod sit quos eius ipsa blanditiis ea.
-      </Panel>
-
-      <LargeBr/>
-      This is <Highlight>highlighed</Highlight> Text!
-     
-    </div>
+    </>
   )
 }
-
-export default Document
