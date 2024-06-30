@@ -1,10 +1,18 @@
 import { theme } from "../../leappaper.config";
 
 export type CodeBlockProps = {
+    language: string,
     children?: React.ReactNode,
-    language: string
+    customProps?: any
 }
 
 export default function CodeBlock(props: CodeBlockProps) {
-    return <theme.codeBlock language={props.language}>{props.children}</theme.codeBlock>;
+    return (
+        <theme.codeBlock
+            customProps={props.customProps}
+            language={props.language}
+        >
+            {props.children}
+        </theme.codeBlock>
+    );
 }

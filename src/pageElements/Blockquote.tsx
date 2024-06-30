@@ -1,9 +1,10 @@
 import { theme } from "../../leappaper.config";
 
 export type BlockquoteProps = {
-    children?: React.ReactNode
+    children?: React.ReactNode,
+    customProps?: any
 }
 
 export default function Blockquote(props: BlockquoteProps) {
-    return <theme.blockquote>{props.children}</theme.blockquote>;
+    return <theme.blockquote customProps={props.customProps}>{props.children}</theme.blockquote>;
 }
