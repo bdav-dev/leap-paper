@@ -6,6 +6,7 @@ import { H1Props } from "../pageElements/H1"
 import { H2Props } from "../pageElements/H2";
 import { H3Props } from "../pageElements/H3";
 import { HighlightProps } from "../pageElements/Highlight";
+import { MarkedProps } from "../pageElements/Marked";
 import BdavBlock from "./BdavTheme/BdavBlock";
 import BdavBlockquote from "./BdavTheme/BdavBlockquote";
 import BdavCode from "./BdavTheme/BdavCode";
@@ -14,6 +15,7 @@ import BdavH1 from "./BdavTheme/BdavH1";
 import BdavH2 from "./BdavTheme/BdavH2";
 import BdavH3 from "./BdavTheme/BdavH3";
 import BdavHighlight from "./BdavTheme/BdavHighlight";
+import BdavMarked from "./BdavTheme/BdavMarked";
 import SpaceBlock from "./SpaceTheme/SpaceBlock";
 import SpaceBlockquote from "./SpaceTheme/SpaceBlockquote";
 import SpaceCode from "./SpaceTheme/SpaceCode";
@@ -31,7 +33,8 @@ export type Theme = {
     codeBlock: (props: CodeBlockProps) => React.ReactNode,
     code: (props: CodeProps) => React.ReactNode,
     blockquote: (props: BlockquoteProps) => React.ReactNode,
-    block: (props: BlockProps) => React.ReactNode
+    block: (props: BlockProps) => React.ReactNode,
+    marked: (props: MarkedProps) => React.ReactNode
 }
 
 export const bdavTheme: Theme = {
@@ -42,7 +45,8 @@ export const bdavTheme: Theme = {
     codeBlock: BdavCodeBlock,
     code: BdavCode,
     blockquote: BdavBlockquote,
-    block: BdavBlock
+    block: BdavBlock,
+    marked: BdavMarked
 }
 
 export const spaceTheme: Theme = {
@@ -53,5 +57,6 @@ export const spaceTheme: Theme = {
     codeBlock: SpaceCodeBlock,
     code: SpaceCode,
     blockquote: SpaceBlockquote,
-    block: SpaceBlock
+    block: SpaceBlock,
+    marked: BdavMarked
 }

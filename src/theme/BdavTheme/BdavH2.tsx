@@ -5,7 +5,7 @@ export default function BdavH2(props: H2Props) {
 
     return (
         <div className="mb-2">
-            <h2 className="text-xl mb-[0.05rem]">
+            <h2 className="text-2xl mb-[0.05rem]">
                 {props.children}
             </h2>
 

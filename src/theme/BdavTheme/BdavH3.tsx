@@ -4,7 +4,7 @@ export default function BdavH3(props: H3Props) {
 
     return (
         <div className="mb-2">
-            <h3 className="text-lg mb-[0.05rem]">
+            <h3 className="text-xl mb-[0.05rem]">
                 {props.children}
             </h3>
 

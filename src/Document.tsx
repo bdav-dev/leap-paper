@@ -6,6 +6,7 @@ import H1 from "./pageElements/H1"
 import H2 from "./pageElements/H2"
 import H3 from "./pageElements/H3"
 import Highlight from "./pageElements/Highlight"
+import Marked from "./pageElements/Marked"
 import LargeBr from "./pageElements/themeIndependent/LargeBr"
 
 export default function Document() {
@@ -14,7 +15,7 @@ export default function Document() {
     <>
       <H1>Document Demo: Themes (First Heading, H1)</H1>
 
-      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Lorem <Marked orange>ipsum dolor sit amet</Marked> consectetur adipisicing elit.
       Soluta provident possimus modi. Officia laborum fuga iste dolor distinctio!
       Minima, eius sapiente commodi tempora officiis deleniti assumenda. Nesciunt quaerat delectus fugit.
       <LargeBr />
