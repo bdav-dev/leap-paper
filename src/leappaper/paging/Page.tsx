@@ -17,9 +17,12 @@ export default function Page(props: PageProps) {
                 padding: props.padding ?? config.defaultPagePadding,
                 borderBottom: config.render ? "none" : "1px grey solid"
             }}
-            className={config.render ? "" : "shadow-lg"}
+            className={`
+                pagebreak
+                ${config.render ? "" : "shadow-lg"}
+            `}
         >
-            <div className="w-full h-full overflow-hidden pagebreak">
+            <div className="w-full h-full overflow-hidden">
                 {props.children}
             </div>
 
