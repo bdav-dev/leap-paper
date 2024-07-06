@@ -1,13 +1,17 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Document from './Document.tsx'
 import './index.css'
-import DocumentWrapper from './DocumentWrapper.tsx'
+import DocumentWrapper from './leappaper/DocumentWrapper.tsx'
+import DocumentProperties from './leappaper/DocumentProperties.tsx'
+import config from '../leappaper.config.tsx'
+
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <DocumentWrapper>
-      <Document />
+      <DocumentProperties>
+        {config.document}
+      </DocumentProperties>
     </DocumentWrapper>
   </React.StrictMode>,
 )
